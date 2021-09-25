@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>Document</title>
-</head>
-<body>
-  <h1>video player</h1>
-  <button class="button" id="backward"></button>
-  <button class="button" id="play"></button>
-  <button class="button" id="pause"></button>
-  <button class="button" id="fordward"></button>
-  
-  <video id="video" src="./video/matrix.mp4" controls muted></video>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>video player</h1>
+    <div class="wrapper">
+      <div class="player">
+        <button class="button" id="backward"></button>
+        <button class="button" id="play"></button>
+        <button class="button" id="pause"></button>
+        <button class="button" id="fordward"></button>
 
-  <script>
-    const $video = document.querySelector('video');
-    debugger
-    const $play= document.querySelector('#play');
-    const $pause = document.querySelector('#pause');
-    
-    $play.addEventListener("click", handlePlay);
-    $pause.addEventListener("click", handlePause);
+        <video id="video" src="./video/matrix.mp4" controls muted></video>
+      </div>
+    </div>
 
-    function handlePlay() {
-      $video.play();
-      $play.hidden = true;
-      $pause.hidden = false;
-    }
-    function handlePause() {
-      $video.pause();
-      $pause.hidden = true;
-      $play.hidden = false;
-    }
-    
-  </script>
-</body>
+    <script>
+      const $video = document.querySelector("video");
+      const $play = document.querySelector("#play");
+      const $pause = document.querySelector("#pause");
+
+      $play.addEventListener("click", handlePlay);
+      $pause.addEventListener("click", handlePause);
+
+      function handlePlay() {
+        $video.play();
+        $play.hidden = true;
+        $pause.hidden = false;
+      }
+      function handlePause() {
+        $video.pause();
+        $pause.hidden = true;
+        $play.hidden = false;
+      }
+    </script>
+  </body>
 </html>

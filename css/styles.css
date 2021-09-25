@@ -2,3 +2,11 @@
 body {
     background-color: #26B4BC;
 }
+
+.wrapper {
+    max-inline-size: 900px;
+    margin: auto;
+}
+.player video {
+    inline-size: 100%;
+}
